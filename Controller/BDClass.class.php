@@ -40,6 +40,7 @@ class bd{
 		$this->desconecta_mysql();
 	}
 }*/
+
 class bd{
     public static $instance = null;
     private $link;
@@ -70,7 +71,7 @@ class bd{
     }
 
     function selectAllPosts(){
-        return mysqli_query($this->link,"select * from posts");
+        return mysqli_query($this->link,"select * from posts.class");
     }
 
     function selectUser($name,$passw){
@@ -98,14 +99,14 @@ class bd{
         return mysqli_fetch_assoc($r);
     }
 
-    function executeInsert($link,$query){
-        mysqli_begin_transaction($link);
-        mysqli_query($link,$query);
-        $affRows=mysqli_affected_rows($link);
+    function executeInsert($query){
+        mysqli_begin_transaction($this->link);
+        mysqli_query($this->link,$query);
+        $affRows=mysqli_affected_rows($this->link);
         if($affRows==1)
-            mysqli_commit($link);
+            mysqli_commit($this->link);
         else
-            mysqli_rollback($link);
+            mysqli_rollback($this->link);
         return $affRows;
     }
 

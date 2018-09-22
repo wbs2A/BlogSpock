@@ -4,8 +4,12 @@
       include "../includes/header.php";
       include "../includes/sidebar.php";
       include "../Controller/BDClass.class.php";
-    $db = bd::getInstance();
-    $posts = $db->selectAllPosts();
+    try{
+        $db = bd::getInstance();
+        $posts = $db->selectAllPosts();
+    }catch(\Exception $e){
+        $posts = null;
+    }
 ?>
 <?php if($posts){
   while($post = $posts->fetch_assoc()){
@@ -26,5 +30,7 @@
         </p>
     </div>
   <?php  }
+    }else{
+
     } ?>
 <?php include "../includes/footer.php"; ?>
