@@ -1,1 +1,2 @@
--Procedure para Remover tudo relacionado a um usuário quando este for excluído.
+X-Procedure para Remover tudo relacionado a um usuário quando este for excluído.
+- Solicitação para mudança de permissão 

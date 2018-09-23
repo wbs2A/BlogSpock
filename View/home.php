@@ -11,26 +11,25 @@
         $posts = null;
     }
 ?>
-<?php if($posts){
-  while($post = $posts->fetch_assoc()){
-   ?>
-    <div class="post">
-        <h1 class="title"><?php $post["titulo"] ?></h1>
-        <div class="createdby">
-            <?php echo ($db->getUser($post["usuario_idusuario"]))["nome"];
-                  if($post["ult_Alt"] != null)
-                      echo $post["ult_Alt"];
-                  else
-                      echo $post["horaCriacao"];
-            ?>
-        </div>
-        <h2 class="description"><?php echo $post["descricao"] ?></h2>
-        <p class="posttext">
-            <?php echo $post["textoPost"] ?>
-        </p>
-    </div>
+<?php   if($posts){
+         while($post = $posts->fetch_assoc()){?>
+            <div class="post">
+                <h1 class="title"><?php $post["titulo"] ?></h1>
+                <div class="createdby">
+                    <?php echo ($db->getUser($post["usuario_idusuario"]))["nome"];
+                          if($post["ult_Alt"] != null)
+                              echo $post["ult_Alt"];
+                          else
+                              echo $post["horaCriacao"];
+                    ?>
+                </div>
+                <h2 class="description"><?php echo $post["descricao"] ?></h2>
+                <p class="posttext">
+                    <?php echo $post["textoPost"] ?>
+                </p>
+            </div>
   <?php  }
-    }else{
+        }else{
 
     } ?>
 <?php include "../includes/footer.php"; ?>
