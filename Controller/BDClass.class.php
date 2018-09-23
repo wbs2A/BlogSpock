@@ -67,17 +67,17 @@ class bd{
     private function __clone() {}
 
     function selectAllUsers(){
-        return mysqli_query($this->link,"select * from usuarios");
+        return mysqli_query($this->link,"select * from usuario");
     }
 
     function selectAllPosts(){
-        return mysqli_query($this->link,"select * from posts.class");
+        return mysqli_query($this->link,"select * from post");
     }
 
-    function selectUser($name,$passw){
+    function getUser($id){
         $resultado = $this->selectAllUsers();
         while($result = mysqli_fetch_assoc($resultado)){
-            if($result["user"]==$name and ((string) $result["password"])==$passw){
+            if($result["idusuario"]==$id){
                 return $result;
             }
         }
