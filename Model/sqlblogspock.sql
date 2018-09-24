@@ -142,7 +142,33 @@ update comentario set comentario.horaCriacao=now() where comentario.idcomentario
 
 END$$
 
+use blogspock $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `del_post`(`id` INT)
+BEGIN
+	SET SESSION AUTOCOMMIT=0;
+	SET AUTOCOMMIT =0;
+    START TRANSACTION;
+			DELETE FROM comentario  WHERE comentario.post_idpost = id;
+            DELETE FROM post WHERE post.idpost = id;
+    		SELECT "suscesso" as suscesso;
+    COMMIT;
+    SET SESSION AUTOCOMMIT=1;
+	SET AUTOCOMMIT =1;
+END $$
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `del_user`(`id` INT)
+BEGIN
+	SET SESSION AUTOCOMMIT = 0;
+	SET AUTOCOMMIT = 0;
+    START TRANSACTION;
+			DELETE FROM comentario WHERE comentario.usuario_idusuario = id;
+            DELETE FROM post WHERE post.usuario_idusuario = id;
+            DELETE FROM usuario WHERE usuario.idusuario = id;
+    		SELECT "suscesso" as suscesso;
+    COMMIT;
+    SET SESSION AUTOCOMMIT=1;
+	SET AUTOCOMMIT =1;
+END $$
 DELIMITER ;
 
 SET SQL_MODE=@OLD_SQL_MODE;
