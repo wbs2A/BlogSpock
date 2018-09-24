@@ -96,10 +96,10 @@ footer{
 #postRegion{
     display: block;
     position: absolute;
-    left: 7.75%;
+    left: 27%;
     top: 8%;
     padding-top: 2% ;
-    width: 85%;
+    width: 50%;
     height: 78%;
     text-align: center;
     opacity: 1;
@@ -110,11 +110,10 @@ footer{
 #postRegion .post{
     display: block;
     position: absolute;
-    left: 35%;
-    top: 30%;
+    left: 10%;
     padding-top: 2% ;
+    width: 80%;
     height: 25%;
-    width: 30%;
     text-align: center;
     opacity: 1;
     border-radius: 5px;
