@@ -1,18 +1,13 @@
-<?php include "../includes/header.php"; ?>
+
+<?php include "../includes/headerlog.php"; ?>
+        <center><h1 id="titulo"> Bem Vindo Blogueirinhx </h1></center>
         <div id="content">
-            <h1> Vida longa e Próspera </h1>
-            <form action="login.php" method="post">
-                <p> Usuário:<input type="text" name="username" required></p>
+            
+            <form action="login_validar.php" method="post">
+                <p> Usuário: <input type="text" name="username" required></p>
                 <p> Senha: <input type="password" name="passw" required></p>
+                <p> <a href="recuperar.php"> Esqueceu a senha? </a></p>
                 <input type="submit" value="Login">
-            </form>
-            <p>Esqueceu a senha?</p>
-            <input type="submit" value="Recuperar senha">
-        </div>
-        <div id="cadastro">
-            <p>Ainda não tem cadastro?</p>
-            <form action="cadastro.php">
-                <input type="submit" value="Cadastrar">
             </form>
         </div>
 <?php include "../includes/footer.php"; ?>

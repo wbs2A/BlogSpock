@@ -1,5 +1,3 @@
 <footer>
-    Criado pelo time: Josué's, NathyVerzas, WBS
+    Criado pelo time: Josué's, NathyVerzas, WBS, Valzinha
 </footer>
-</body>
-</html>
