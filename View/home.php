@@ -9,6 +9,16 @@
     $posts = $db->selectAllPosts();
 ?>
 
+<?php
+if(isset($_SESSION["nome"])){
+    include "../includes/logednavbar.php";
+}else{
+    echo 'eeee';
+    include "../includes/navbar.php";
+}
+
+?>
+
 <?php if($posts){
   while($post = $posts->fetch_assoc()){
    ?>

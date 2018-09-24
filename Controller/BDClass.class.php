@@ -95,7 +95,7 @@ class bd{
     }
 
     function  selectNivel($id){
-        $r = mysqli_query($this->link,"select * from acesso where id=".$id);
+        $r = mysqli_query($this->link,"select * from acesso where idAcesso=".$id);
         return mysqli_fetch_assoc($r);
     }
 

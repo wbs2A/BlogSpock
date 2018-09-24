@@ -1,6 +1,6 @@
-<nav>
-    <ul style="align-items: right">
-        <li><a href="#index">Cadastra-se</a></li>
-        <li><a href="#outracosia">Fazer Login</a></li>
+<nav style="font-family: Arial; font-weight: 550">
+    <ul>
+        <li style="margin-left: 80% "><a href="cadastro.php">Cadastre-se</a></li>
+        <li><a href="login.php">Fazer Login</a></li>
     </ul>
 </nav>

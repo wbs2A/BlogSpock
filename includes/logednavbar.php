@@ -1,7 +1,7 @@
 <nav>
     <ul style="text-align: right">
-        <li><a href="#i"><?php $_SESSION["user"] ?></a></li>
-        <li><a href="#perfil"> Perfil </li>
+        <li><p style="color: #fff; text-align: right;">Olá <?php echo $_SESSION["nome"] ?>!</p></li>
+        <li class="menuitem"><a href="#perfil"> Perfil </a> </li>
         <?php
             switch($_SESSION["nivel"]){
                 case "Adm Geral":
