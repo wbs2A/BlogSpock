@@ -58,7 +58,7 @@ class bd{
         return mysqli_fetch_assoc($r);
     }
 
-    function executeInsert($query){
+    function execute($query){
         mysqli_begin_transaction($this->link);
         $resultado = mysqli_query($this->link,$query);
         $affRows=mysqli_affected_rows($this->link);
@@ -93,20 +93,32 @@ class bd{
         switch ($nivel) {
             case 1:
                  $q = "insert into acesso values('".$nivel."','".$gerPost."', '".$gerComent."');";
-                 return $this->executeInsert($this->link, $q);
+                 return $this->execute($this->link, $q);
                 break;
             
             case 2:
                  $q = "insert into acesso values('".$nivel."','".$gerComent."');";
-                 return $this->executeInsert($this->link, $q);
+                 return $this->execute($this->link, $q);
                 break;
         }
     }
 
     function prepareInsertUser($nome,$data, $email,$senha, $nivel){
         $q = "insert into usuario values('".$nome."','".$data."','".$email."','".md5($senha)."',".$nivel.");";
-        return $this->executeInsert($this->link, $q);
+        return $this->execute($this->link, $q);
     }
+
+    function deletePost($id){
+        $q = "CALL del_post('".$id."')";
+        return $this->execute( $this->link, $q);
+    }
+
+    function deleteUser($id){
+        $q = "CALL del_user('".$id."')";
+        return $this->execute( $this->link,$q);
+    }
+
+    
 }
 
 ?>
