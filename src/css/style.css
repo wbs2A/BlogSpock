@@ -72,6 +72,10 @@ li a{
     text-decoration: none;
 }
 
+#perfil{
+    margin-left: 65%;
+}
+
 /* alterar cor passar cursor em cima */
 li a:hover{
     background-color: #111;
@@ -87,4 +91,52 @@ footer{
     text-align: center;
     width: 100%;
     bottom:0;
+}
+
+#postRegion{
+    display: block;
+    position: absolute;
+    left: 7.75%;
+    top: 8%;
+    padding-top: 2% ;
+    width: 85%;
+    height: 78%;
+    text-align: center;
+    opacity: 1;
+    border-radius: 5px;
+    background-color: rgba(255,242,255,0.8);
+}
+
+#postRegion .post{
+    display: block;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    padding-top: 2% ;
+    height: 25%;
+    width: 30%;
+    text-align: center;
+    opacity: 1;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+.post .title{
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+}
+
+.post .description{
+    font-size: 15px;
+    font-family: Verdana, sans-serif;
+}
+.post .createdby{
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+.post .posttext{
+    text-align: justify;
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
 }

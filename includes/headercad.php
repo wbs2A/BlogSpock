@@ -7,9 +7,9 @@
     <?php  ?>
 
     <nav style="font-family: Arial; font-weight: 550">
-	    <ul>
-		  <li style="text-align: center;margin-left: 90%; color: white;"> <p> Ainda não tem conta?</p><a href="cadastro.php">Cadastre-se</a></li>
-		</ul>
-	</nav>
+        <ul>
+            <li style="margin-left: 90%; color: white;"><p>Já tem cadastro?</p><a href="login.php">Acessar. </a></li>
+        </ul>
+    </nav>
 </head>
 <body>

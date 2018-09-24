@@ -1,7 +1,6 @@
 <nav>
     <ul style="text-align: right">
-        <li><p style="color: #fff; text-align: right;">Olá <?php echo $_SESSION["nome"] ?>!</p></li>
-        <li class="menuitem"><a href="#perfil"> Perfil </a> </li>
+        <li><p style="color: #fff;">Olá <?php echo $_SESSION["nome"] ?>!</p></li>
         <?php
             switch($_SESSION["nivel"]){
                 case "Adm Geral":
@@ -16,4 +15,8 @@
                 case "Usuario": include "menus/user.php";
                     break;
             }
+            echo "<li><a href=../Controller/logout.php?token=".md5(session_id()).">Sair</a></li>";
         ?>
+
+    </ul>
+</nav>
